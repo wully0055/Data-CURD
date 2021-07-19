@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上傳檔案</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+  
+<SCRIPT LANGUAGE="javascript">
+
+    var password = prompt("請輸入密碼","")
+    if (password=="")
+    {
+    alert('你真棒 !')
+    }
+    else
+    {
+    if (password=="null")
+    {
+    alert('請再輸入一次密碼');
+    location.href='update.html';
+    }
+    else
+    if (password!="password")
+    {
+    alert('你想幹嘛 ?');
+    location.href='update.html';
+    }
+    }
+    </SCRIPT>
+<br><br>
+  <h1 style="text-align:center"><font size="6">- 上傳檔案 -</font></h1> 
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form method="post" enctype="multipart/form-data" action="updatephp.php">
+        <div class="form-group mb-5">
+          <label for="exampleFormControlSelect7">上傳檔案</label>
+          <input id="exampleFormControlSelect7" class="form-control-file" type="file" required="required" name="my_file" multiple>
+        </div>
+        <input class="btn btn-success form-control col-12" type="submit" value="送 出">
+        
+      </form>   
+    </div>    
+  </div>
+  
+</body>
+</html> 
